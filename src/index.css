@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+:root{
+    --primary: #a6ff00;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}ul{
+    list-style: none;
+}a{
+    text-decoration: none;
+}/* للتحكم في عرض السكرول */
+html {
+    /* تلوين خلفية الموقع الرسمي */
+    background-color: #0a0a0a;
+
+    scrollbar-width: thin; /* خيار حديث وسهل: يجعل السكرول نحيفاً */
+    scrollbar-color: #a6ff00 #1a1a1a; /* لون المقبض (أخضر) ولون المسار (غامق) */
+}
+
+/* للمتصفحات التي تدعم Webkit (مثل Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 8px; /* عرض السكرول */
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a; /* لون الخلفية خلف السكرول */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #333; /* لون مقبض التمرير */
+    border-radius: 20px;    /* جعل الزوايا دائرية */
+    border: 2px solid #0a0a0a; /* إضافة مسافة حول المقبض */
+}
+
+/* تأثير عند المرور بالفأرة */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary); /* يتحول للون الأخضر عند الوقوف عليه */
+}

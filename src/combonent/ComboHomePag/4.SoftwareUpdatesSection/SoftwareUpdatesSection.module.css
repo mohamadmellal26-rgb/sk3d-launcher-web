@@ -1,0 +1,66 @@
+.updateSection {
+    padding: 100px 5%;
+    background-color: #050505;
+    color: #ffffff;
+}
+
+.updateContainer {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.updateContent { flex: 1; }
+
+.badge {
+    background: rgba(138, 43, 226, 0.1);
+    border: 1px solid rgba(186, 226, 43, 0.4);
+    padding: 8px 16px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    color: #c792ea;
+}
+
+.updateContent h2 { 
+    font-size: 2.5rem; 
+    margin-bottom: 20px; 
+    line-height: 1.2; 
+    font-weight: 700;
+}
+
+.updateContent p { 
+    color: #a0a0a0; 
+    margin-bottom: 30px; 
+    line-height: 1.7; 
+    font-size: 1.1rem;
+}
+
+.linkButton {
+    color: #8A2BE2; /* تم تعيين اللون مباشرة لضمان العمل */
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.linkButton:hover { opacity: 0.8; gap: 15px; }
+
+.updateImage { flex: 1; }
+.updateImage img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 900px) {
+    .updateContainer { flex-direction: column; text-align: center; }
+    .updateContent h2 { font-size: 2rem; }
+    .linkButton { justify-content: center; }
+}
