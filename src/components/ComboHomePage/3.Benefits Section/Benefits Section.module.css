@@ -1,0 +1,84 @@
+/* تحسينات لمنع الـ Layout Shift (CLS) */
+.benefitsSection { 
+  padding: 60px 5%; 
+  background-color: #050505; 
+  /* حجز مساحة ثابتة للمقطع */
+  min-height: 500px; 
+  contain: content;
+}
+
+.benefitsGrid { 
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px; 
+  /* منع الشبكة من الانهيار قبل تحميل الكروت */
+  min-height: 400px; 
+}
+
+.benefitCard { 
+  background: #121212; 
+  padding: 40px; 
+  border-radius: 20px; 
+  border: 1px solid #222; 
+  color: white; 
+  /* حجز مساحة لكل كارد */
+  display: flex; 
+  flex-direction: column;
+}
+
+.fullWidth { grid-column: span 2; }
+
+/* إعدادات النصوص والأيقونات الثابتة */
+.benefitCard h3 { 
+  margin: 15px 0; 
+  font-size: 1.5rem; 
+  min-height: 1.5em; /* ضمان مساحة للنص */
+}
+
+.benefitCard p { 
+  color: #aaa; 
+  line-height: 1.6; 
+  margin-bottom: 20px; 
+  flex-grow: 1; /* تمديد النص ليملأ الكارد بالتساوي */
+}
+
+.iconContainer { 
+  background: #1d1d1d; 
+  width: 60px; 
+  height: 60px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  border-radius: 12px; 
+  color: #a6ff00; 
+  margin-bottom: 20px;
+  /* منع تغيير الحجم */
+  flex-shrink: 0; 
+}
+
+.exploreBtn {
+  background-color: transparent;
+  color: #a6ff00;
+  border: 2px solid #a6ff00;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* تحديد حجم الزر */
+  width: fit-content; 
+}
+
+.exploreBtn:hover {
+  background-color: rgba(166, 255, 0, 0.2);
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(166, 255, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .benefitsGrid { grid-template-columns: 1fr; }
+  .fullWidth { grid-column: span 1; }
+}

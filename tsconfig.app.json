@@ -7,6 +7,14 @@
     "types": ["vite/client"],
     "skipLibCheck": true,
 
+    /* إعدادات المسارات (Path Aliases) */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@pages/*": ["./src/pages/*"]
+    },
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -21,5 +29,5 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/combonent/Star.Header"]
+  "include": ["src", "src/components/ComboCapeDetails/CapeViewer/data"]
 }

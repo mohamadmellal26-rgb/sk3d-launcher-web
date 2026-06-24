@@ -1,0 +1,58 @@
+.siteHeader { display: flex; flex-direction: column; width: 100%; }
+
+.topBanner { background: #a6ff00; padding: 10px 20px; font-weight: 700; color: #000; text-align: center; }
+
+.mainNav { background: #1a1a1a; padding: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+
+.navContainer { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+
+.navLinks { display: flex; gap: 30px; }
+
+.navLinks a { 
+    color: white; 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    transition: 0.3s;
+}
+
+.navLinks a:hover { color: #a6ff00; }
+
+.signIn { 
+    display: flex; align-items: center; gap: 10px; 
+    background-color: #262626; color: white; 
+    padding: 10px 20px; border: 1px solid #444; 
+    border-radius: 8px; cursor: pointer; transition: 0.3s; 
+}/* إخفاء الأيقونة في الشاشات الكبيرة */
+.menuIcon {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menuIcon {
+    display: block;
+  }
+
+  .navLinks {
+    display: none; /* إخفاء الروابط في الموبايل */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #1a1a1a;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    border-bottom: 2px solid #a6ff00;
+  }
+
+  /* إظهار الروابط عند الضغط */
+  .navLinks.active {
+    display: flex;
+  }
+}

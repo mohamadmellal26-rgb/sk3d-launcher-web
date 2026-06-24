@@ -1,0 +1,48 @@
+/* الحاوية الأساسية للـ Login */
+.login-container {
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 10px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.login-container h1 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* تنسيق حقول الإدخال */
+input {
+    background-color: #2b2b2b;
+    border: 1px solid #3d3d3d;
+    color: white;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #5865f2;
+}
+
+/* تنسيق الزر */
+.signin-btn {
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signin-btn:hover {
+    filter: brightness(1.2);
+}
